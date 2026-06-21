@@ -1,7 +1,6 @@
 # Controle de Almoxarifado — SENAC Zona Norte
 
-> 🔗 **Projeto no ar:** _[cole aqui o link do GitHub Pages ou Vercel depois do deploy]_
-
+> 🔗 **Projeto no ar:** https://github.com/Universidade-Cesumar/prova-2bi-ads-3sem-alanrossinedev
 Sistema web para modernizar o controle do almoxarifado de itens de saúde usado nas aulas práticas do curso técnico de Enfermagem do SENAC Zona Norte. Substitui a planilha manual usada hoje, permitindo cadastrar materiais, dar baixa no estoque, excluir itens e acompanhar visualmente o que está em nível crítico.
 
 Projeto desenvolvido em 3 sprints, como exercício de entregas ágeis e incrementais.
@@ -23,16 +22,6 @@ Projeto desenvolvido em 3 sprints, como exercício de entregas ágeis e incremen
 - CSS3
 - JavaScript (ES6+, com `fetch`, `async/await`)
 - [MockAPI.io](https://mockapi.io) como backend simulado (API RESTful)
-
-## Como rodar o projeto localmente
-
-Este projeto não precisa de instalação nem de servidor — é só abrir no navegador:
-
-1. Baixe ou clone este repositório.
-2. Abra o arquivo `index.html` diretamente no navegador (duplo clique, ou clique direito → "Abrir com" → seu navegador preferido).
-3. A aplicação já está conectada à API configurada no MockAPI.io — não é necessário nenhum cadastro ou chave de acesso adicional.
-
-> Dica: se quiser editar o código com recarregamento automático, recomenda-se usar a extensão **Live Server** no VS Code.
 
 ## Sobre o uso do MockAPI no projeto
 
