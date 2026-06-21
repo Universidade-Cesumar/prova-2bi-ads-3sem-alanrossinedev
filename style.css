@@ -1,1 +1,202 @@
-/* Caso queira utilizar framework como Bootstrap para estilização, pode utilizar. Basta ignoar esse arquivo */
+:root {
+    --azul-clinico: #1b6e7a;
+    --azul-escuro: #0f4c56;
+    --fundo: #f4f8f8;
+    --branco: #ffffff;
+    --cinza-texto: #3a4a4a;
+    --cinza-borda: #dbe6e6;
+    --critico-fundo: #fdebea;
+    --critico-borda: #e07a72;
+    --critico-texto: #9c2e26;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--cinza-texto);
+}
+
+.topo {
+    background: var(--azul-clinico);
+    color: var(--branco);
+    padding: 24px 32px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.subtitulo {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.painel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 0 16px;
+}
+
+.cartao-dashboard {
+    background: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-left: 4px solid var(--azul-clinico);
+    border-radius: 8px;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+}
+
+.dashboard-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6b7d7d;
+}
+
+#total-itens {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--azul-escuro);
+}
+
+.campo-busca {
+    flex: 1;
+    min-width: 220px;
+}
+
+#input-busca {
+    width: 100%;
+}
+
+.formulario {
+    max-width: 900px;
+    margin: 16px auto 0;
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: var(--branco);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 8px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px 12px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    flex: 1;
+    min-width: 160px;
+}
+
+input:focus {
+    outline: 2px solid var(--azul-clinico);
+    outline-offset: 1px;
+}
+
+button {
+    background: var(--azul-clinico);
+    color: var(--branco);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+button:hover {
+    background: var(--azul-escuro);
+}
+
+.btn-excluir {
+    background: #8a8a8a;
+}
+
+.btn-excluir:hover {
+    background: #6b6b6b;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 40px;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+thead {
+    background: var(--azul-escuro);
+    color: var(--branco);
+}
+
+th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--cinza-borda);
+    font-size: 0.92rem;
+}
+
+tbody tr:hover {
+    background: #eef6f6;
+}
+
+.formulario-retirada {
+    align-items: center;
+}
+
+.formulario-retirada label {
+    font-size: 0.9rem;
+    color: var(--azul-escuro);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.formulario-retirada input[type="number"] {
+    flex: 0 0 100px;
+}
+
+.dica-retirada {
+    font-size: 0.82rem;
+    color: #6b7d7d;
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Requisito Sprint 3: alerta visual de estoque baixo */
+.estoque-critico {
+    background: var(--critico-fundo);
+}
+
+.estoque-critico td {
+    color: var(--critico-texto);
+    font-weight: 600;
+    border-bottom: 1px solid var(--critico-borda);
+}
+
+@media (max-width: 600px) {
+    .painel,
+    .formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
